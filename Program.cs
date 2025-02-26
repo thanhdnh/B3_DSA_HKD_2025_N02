@@ -35,9 +35,10 @@ public class MyStack
         Node n;
         do{
             n = Pop();
-            temp.Push(n);
-            if(n!=null)
+            if(n!=null){
                 dem++;
+                temp.Push(n.data);
+            }
         }while(n!=null);
         do{
             n = temp.Pop();
