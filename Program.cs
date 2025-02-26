@@ -133,6 +133,9 @@ public class Program
 
 
         System.Collections.Stack st = new System.Collections.Stack();
-        //st.
+        System.Collections.Queue q = new System.Collections.Queue();
+
+        System.Collections.Generic.Stack<int> stg = new System.Collections.Generic.Stack<int>();
+        System.Collections.Generic.Queue<int> qg = new System.Collections.Generic.Queue<int>();
     }
 }
