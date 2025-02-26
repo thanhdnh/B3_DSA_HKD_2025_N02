@@ -25,26 +25,27 @@ public class MyStack
             return null;
         Node d = top;
         top = top.next;
-        if(top!=null)
+        if(countA>0)
             countA--;
         return d;
     }
     public int Count(){
         int dem = 0;
         MyStack temp = new MyStack();
-        Node n;
+        //Node n;
         do{
-            n = Pop();
-            if(n!=null){
+            //n = Pop();
+            //if(n!=null){
                 dem++;
-                temp.Push(n.data);
-            }
-        }while(n!=null);
+                temp.Push(Pop().data);
+            //}
+        }while(top!=null);
         do{
-            n = temp.Pop();
+            /*n = temp.Pop();
             if(n!=null)
-                Push(n.data);
-        }while(n!=null);
+                Push(n.data);*/
+            Push(temp.Pop().data);
+        }while(temp.top!=null);
         return dem;
     }
 }
