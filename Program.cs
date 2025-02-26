@@ -57,7 +57,7 @@ public class Program
         s.Push(2);
         s.Push(3);
         Console.WriteLine("Count: " + s.Count());
-        //Console.WriteLine("Count: " + s.countA);
+        Console.WriteLine("Count: " + s.countA);
 
 
         System.Collections.Stack st = new System.Collections.Stack();
