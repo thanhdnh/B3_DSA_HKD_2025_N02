@@ -48,6 +48,12 @@ public class MyStack
         }while(temp.top!=null);
         return dem;
     }
+    public object Peek(){
+        /*object n = Pop().data;
+        Push(n);
+        return n;*/
+        return top.data;
+    }
 }
 public class Program
 {
@@ -60,9 +66,10 @@ public class Program
         s.Push(3);
         Console.WriteLine("Count: " + s.Count());
         Console.WriteLine("Count: " + s.countA);
+        Console.WriteLine("Peek: " + s.Peek());
 
 
         System.Collections.Stack st = new System.Collections.Stack();
-        //st.
+        //st.Peek
     }
 }
