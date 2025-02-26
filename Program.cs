@@ -6,6 +6,7 @@
 public class MyStack
 {
     Node top;
+    public int countA = 0;
     public bool IsEmpty()
     {
         return top == null;
@@ -16,6 +17,7 @@ public class MyStack
         n.data = ele;
         n.next = top;
         top = n;
+        countA++;
     }
     public Node Pop()
     {
@@ -23,7 +25,26 @@ public class MyStack
             return null;
         Node d = top;
         top = top.next;
+        if(top!=null)
+            countA--;
         return d;
+    }
+    public int Count(){
+        int dem = 0;
+        MyStack temp = new MyStack();
+        Node n;
+        do{
+            n = Pop();
+            temp.Push(n);
+            if(n!=null)
+                dem++;
+        }while(n!=null);
+        do{
+            n = temp.Pop();
+            if(n!=null)
+                Push(n.data);
+        }while(n!=null);
+        return dem;
     }
 }
 public class Program
@@ -35,5 +56,11 @@ public class Program
         s.Push(1);
         s.Push(2);
         s.Push(3);
+        Console.WriteLine("Count: " + s.Count());
+        //Console.WriteLine("Count: " + s.countA);
+
+
+        System.Collections.Stack st = new System.Collections.Stack();
+        //st.
     }
 }
